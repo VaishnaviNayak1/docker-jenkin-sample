@@ -1,4 +1,6 @@
-FROM openjdk:8
-EXPOSE 8082
-ADD target/docker-jenkin-sample.jar docker-jenkin-sample.jar
-ENTRYPOINT ["java","-jar","/docker-jenkin-sample.jar"]
+FROM ubuntu 
+MAINTAINER asifimmanad.tech@gmail.com 
+
+RUN apt-get update 
+RUN apt-get install –y nginx 
+CMD [“echo”,”Image created”]
